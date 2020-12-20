@@ -1,0 +1,96 @@
+
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'myapp/productlist.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background: url('{% static "myapp/image/mp_home.jpg" %}')no-repeat center center fixed;
+                background-size: cover;
+            }
+            .button{
+                position: relative;
+                display: inline-block;
+                padding: 12px 36px;
+                margin: 10px 0;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 2px;
+                border-radius: 40px;
+                background: linear-gradient(90deg,rgb(221, 205, 205),#073d13);
+            }
+
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            .button:hover span {
+              padding-right: 25px;
+            }
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+        </style>
+        <title>Product Stock Management</title>
+        <title> product list </title>
+    </head>
+ 
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <center><h1>STOCK ENTRY</h1></center>
+       <center> <table>
+            <thead>
+             <tr>
+              <th scope="col">product id</th>
+              <th scope="col"><input type="text" name="product_id" id="product_id" placeholder="enter the stock id" required></th>                 
+             </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                  <th scope="row">product name</th>
+                  <td><input type="text" name="product_name" id="product_name" placeholder="enter the stock name"required></td>  
+                </tr>  
+                <tr>
+                    <th scope="row">Supplier name</th>
+                    <td><input type="text" name="customer_name" id="customer_name" placeholder="enter the suppiler name"required></th></td>  
+                </tr>  
+                <tr>
+                    <th scope="row">cost price</th>
+                    <td><input type="text" name="cost_price" id="cost_price" placeholder="enter the cost price"required></td>  
+                </tr>
+                <tr>
+                    <th scope="row">avaliable stock</th>
+                    <td><input type="text" name="aval_stock" id="aval_stock" placeholder="enter the aval_stock"required></td>  
+                </tr>
+                <tr>
+                    <th scope="row">location</th>
+                    <td><input type="text" name="location" id="location" placeholder="enter the location"required></td>  
+                </tr>
+                <tr>
+                    <th scope="row"><input type="submit" name="" id=""></th>
+                </tr>
+             </tbody>
+        </table></center>
+    
+    </form>
+    <div class="but">
+        <center><div class="button"><a href="/homepage/"><span>EXIT</span></a></div></center>
+    </div>
+
+</html>

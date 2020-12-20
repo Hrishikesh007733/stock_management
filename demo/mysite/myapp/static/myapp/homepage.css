@@ -1,0 +1,12 @@
+body{
+  width: 15%;
+  height: 5%;
+  background-color: rgb(243,234,234);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+

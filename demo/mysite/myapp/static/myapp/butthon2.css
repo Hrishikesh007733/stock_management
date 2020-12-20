@@ -1,0 +1,27 @@
+.button{
+    position: relative;
+    text-align: center;
+    width: 70px;
+    padding: 9px;
+    font-size: 15px;
+    color: #b81c36;
+    font-family: poppins;
+    font-weight: 50;
+    border: 5px solid #c00b14;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    cursor: pointer;
+    border-radius: 600px;
+    box-shadow: 0 9px #999;
+    transition: 0.4s;
+ } 
+ .button:hover{
+     
+     box-shadow: 0 12px 16px 0 rgba(236, 5, 5, 0.658), 0 17px 50px 0 rgba(211, 18, 18, 0.616);
+     text-shadow: 0 0 5px #d11d1d,0 0 5px #cc2a3f;           
+ }
+ .button:active {
+    background-color: #c53048;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

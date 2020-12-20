@@ -1,0 +1,70 @@
+
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'myapp/productlist.css' %}">
+        <link rel="stylesheet" href="{% static 'myapp/butthon2.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background: url('{% static "myapp/image/" %}')no-repeat center center fixed;
+                background-size: cover;
+                max-width: 100%;
+                height: auto;
+            }
+           
+        </style>
+        <title>Product Stock Management</title>
+        <title> place order </title>
+    </head>
+  <body>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+       <center><h1> PLACE ORDER</h1></center>
+       <center> <table class="placeorder">
+            <thead>
+             <tr>
+              <th scope="col">Customer Name</th>
+              <th scope="col"><input type="text" name="c_name" id="c_name" required placeholder="enter the customer name"required></th>                 
+             </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                  <th scope="row">CUSTOMER CONTACT</th>
+                  <td><input type="text" name="c_contact" id="c_contact" placeholder="enter the customer contact" required></td>  
+                </tr>  
+                <tr>
+                    <th scope="row">TOTAL ITEMS</th>
+                    <td><input type="text" name="tot_items" id="tot_items" placeholder="enter the total items" required></th></td>  
+                </tr>  
+                <tr>
+                    <th scope="row">TOTAL COST</th>
+                    <td><input type="text" name="tot_cost" id="tot_cost" placeholder="enter the total cost" required></td>  
+                </tr>
+                <tr>
+                    <th scope="row">ADDRESS</th>
+                    <td><textarea type="text" name="adress" id="adress" placeholder="enter the adress"required></textarea></td>  
+                </tr>
+                <tr>
+                    <th scope="row">ORDER THE ITEMS</th>
+                    <td><input type="text" name="order" id="order" placeholder="enter the order" required></td>  
+                </tr>
+                <tr>
+                    <th scope="row">ORDER TIME</th>
+                    <td><input type="date" name="date" id="date" placeholder="enter the order date" required></td>  
+                </tr>
+                <tr>
+                    <th scope="row"><input type="submit" name="submit" id=""></th>
+                </tr>
+                
+                
+             </tbody>
+        </table></center>
+     </form>
+     <div class="but">
+         <center><div class="button"><a href="/cushomepage/">exit</a></div></center>
+     </div>
+    </body>
+</html>

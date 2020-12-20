@@ -1,0 +1,47 @@
+
+.product{
+    text-align: center;
+}
+.product{
+    text-align: center;   
+}
+
+td{
+
+	font-size: 18px;
+
+}
+tr:nth-child(odd){
+
+	background-color: lightblue;
+
+}
+
+tr:nth-child(odd):hover{
+
+	background-color: dodgerblue;
+
+	color: white;
+
+	transform: scale(1.3);
+
+	transition: transform 300ms ease-in;
+
+}
+
+tr:nth-child(even){
+
+	background-color: #ededed;
+
+}
+
+tr:nth-child(even):hover{
+
+	background-color: lightgray;
+
+	transform: scale(1.3);
+
+	transition: transform 300ms ease-in;
+
+
+}

@@ -1,0 +1,7 @@
+{% extends 'myapp/base.html' %}
+{% block body %}           
+{% for stock_entry in stock_list %}
+     <a href="{% url 'myapp:details' stock_entry.id %}"> {{stock_entry.product_name}} </a> <br>
+{% endfor %}
+{% endblock %}
+    

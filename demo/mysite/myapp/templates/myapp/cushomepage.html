@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+        <html lang="en">
+         <head>
+           {% block body %}
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Product Stock Management</title>
+         </head>
+        
+         <body>
+            <center><h1>Customer home page</h1></center>
+            <center><h2><a href="/orderplace/">Place Order</a></h2></center> </br>
+            <center><h4><a href="/">customer</a></h4></center> </br>
+          {% endblock %}
+         </body>
+        </html>

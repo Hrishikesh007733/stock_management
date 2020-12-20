@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+<html>
+    <head> 
+      <link rel="stylesheet" href="{% static 'myapp/homepage.css' %}">
+     
+    </head>
+    <style>
+      
+      </style>
+     <body>
+      {% block body %}
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width= device-width , initial-scale=1.0">
+       <title> Manager </title>
+       
+       <body>
+        <center><h1>Manager home page</h1></center><br>
+        <center><div class="button butadd"><a href="/add_stock/">Add Stock</a></div></center><br>
+        <center><div class="button butadd"><a href="/productlist/">Product List</a></div></center><br>
+        <center><div class="button butadd"><a href="/supplierorder/">Supplier</a></div></center>
+       </body>
+       {% endblock %}
+      
+   </body>
+</html>

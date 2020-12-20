@@ -1,0 +1,15 @@
+.table{
+    border-collapse: collapse;
+    background-color: indigo-500;
+}
+.table th{
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    padding: 4px 30px 4px 8px;
+}
+
+.table td{
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+}
