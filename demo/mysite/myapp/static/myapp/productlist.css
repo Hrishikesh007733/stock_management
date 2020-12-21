@@ -1,6 +1,6 @@
 table{
      width: 400px; 
-     box-shadow: 12px 12px 20px 6px #2e6da4;
+     box-shadow: 0 12px 16px 0 rgba(36, 184, 6, 0.411), 0 17px 50px 0 rgba(5, 170, 41, 0.493);
 }
 
 table, td, th{

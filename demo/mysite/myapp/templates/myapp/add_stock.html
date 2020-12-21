@@ -47,43 +47,42 @@
             }
         </style>
         <title>Product Stock Management</title>
-        <title> product list </title>
     </head>
  
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <center><h1>STOCK ENTRY</h1></center>
+      <center><h1 style="color: rgb(223, 16, 85);">STOCK ENTRY</h1></center>
        <center> <table>
             <thead>
              <tr>
-              <th scope="col">product id</th>
+              <th scope="col">PRODUCT ID</th>
               <th scope="col"><input type="text" name="product_id" id="product_id" placeholder="enter the stock id" required></th>                 
              </tr>
             </thead>
            
             <tbody>
                 <tr>
-                  <th scope="row">product name</th>
+                  <th scope="row">PRODUCT NAME</th>
                   <td><input type="text" name="product_name" id="product_name" placeholder="enter the stock name"required></td>  
                 </tr>  
                 <tr>
-                    <th scope="row">Supplier name</th>
+                    <th scope="row">SUPPLIER NAME</th>
                     <td><input type="text" name="customer_name" id="customer_name" placeholder="enter the suppiler name"required></th></td>  
                 </tr>  
                 <tr>
-                    <th scope="row">cost price</th>
+                    <th scope="row">COST PRICE</th>
                     <td><input type="text" name="cost_price" id="cost_price" placeholder="enter the cost price"required></td>  
                 </tr>
                 <tr>
-                    <th scope="row">avaliable stock</th>
+                    <th scope="row">AVALABILE STOCK</th>
                     <td><input type="text" name="aval_stock" id="aval_stock" placeholder="enter the aval_stock"required></td>  
                 </tr>
                 <tr>
-                    <th scope="row">location</th>
+                    <th scope="row">LOCATION</th>
                     <td><input type="text" name="location" id="location" placeholder="enter the location"required></td>  
                 </tr>
                 <tr>
-                    <th scope="row"><input type="submit" name="" id=""></th>
+                  <th scope="row"><input type="submit" name="" id=""></th>
                 </tr>
              </tbody>
         </table></center>
