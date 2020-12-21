@@ -22,6 +22,6 @@
  }
  .button:active {
     background-color: #c53048;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px rgb(8, 8, 8);
     transform: translateY(4px);
   }

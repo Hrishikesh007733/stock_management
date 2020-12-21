@@ -17,7 +17,11 @@ table, td, th{
     text-align: center;   
 }
 table{
-    width: 95%;
+    left: 50%;
+    right: 50%;
+    width: 900px;
+    height: 200px;
+    border: 2px solid black;
     margin: auto;
     text-align: center;
     font-size: large;
