@@ -8,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
-                background: url('{% static "myapp/image/" %}')no-repeat center center fixed;
-                background-size: cover;
+                background: url('{% static "myapp/image/cusorder.jfif" %}')no-repeat center center fixed;
+                
+                background-position-x: 50%;
+                background-position-y: 80%;
                 max-width: 100%;
                 height: auto;
             }
@@ -21,7 +23,7 @@
   <body>
       <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-       <center><h1> PLACE ORDER</h1></center>
+       <center><h1 style="color: darkblue;"> PLACE ORDER</h1></center>
        <center> <table class="placeorder">
             <thead>
              <tr>
@@ -40,10 +42,6 @@
                     <td><input type="text" name="tot_items" id="tot_items" placeholder="enter the total items" required></th></td>  
                 </tr>  
                 <tr>
-                    <th scope="row">TOTAL COST</th>
-                    <td><input type="text" name="tot_cost" id="tot_cost" placeholder="enter the total cost" required></td>  
-                </tr>
-                <tr>
                     <th scope="row">ADDRESS</th>
                     <td><textarea type="text" name="adress" id="adress" placeholder="enter the adress"required></textarea></td>  
                 </tr>
@@ -55,13 +53,11 @@
                     <th scope="row">ORDER TIME</th>
                     <td><input type="date" name="date" id="date" placeholder="enter the order date" required></td>  
                 </tr>
-                <tr>
-                    <th scope="row"><input type="submit" name="submit" id=""></th>
-                </tr>
                 
-                
-             </tbody>
+            </tbody>
         </table></center>
+        <center><h2><input type="submit" name="submit" id=""></h2></center>
+                
      </form>
      <div class="but">
          <center><div class="button"><a href="/cushomepage/">exit</a></div></center>

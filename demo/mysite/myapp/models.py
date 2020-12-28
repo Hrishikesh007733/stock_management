@@ -22,7 +22,6 @@ class customer(models.Model):
     c_contact = models.IntegerField(default=10)
     date = models.DateTimeField(auto_now=True)
     tot_items = models.IntegerField()
-    tot_cost = models.IntegerField()
     adress = models.CharField(max_length=100)
     order = models.CharField(max_length=50)
 

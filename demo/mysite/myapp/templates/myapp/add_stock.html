@@ -21,7 +21,7 @@
                 font-size: 12px;
                 letter-spacing: 2px;
                 border-radius: 40px;
-                background: linear-gradient(90deg,rgb(221, 205, 205),#073d13);
+                background: linear-gradient(90deg,rgb(55, 201, 18),#abec12);
             }
 
             .button span {
@@ -51,7 +51,7 @@
  
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <center><h1 style="color: rgb(223, 16, 85);">STOCK ENTRY</h1></center>
+      <center><h1 style="color: rgb(14, 15, 15); ">STOCK ENTRY</h1></center>
        <center> <table>
             <thead>
              <tr>
@@ -81,12 +81,9 @@
                     <th scope="row">LOCATION</th>
                     <td><input type="text" name="location" id="location" placeholder="enter the location"required></td>  
                 </tr>
-                <tr>
-                  <th scope="row"><input type="submit" name="" id=""></th>
-                </tr>
              </tbody>
-        </table></center>
-    
+        </table></center><br>
+        <center><h2><input type="submit" name="" id=""></h2></center>
     </form>
     <div class="but">
         <center><div class="button"><a href="/homepage/"><span>EXIT</span></a></div></center>

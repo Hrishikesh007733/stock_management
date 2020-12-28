@@ -37,12 +37,11 @@ def place_order(request):
         c_name = request.POST.get('c_name',)
         c_contact = request.POST.get('c_contact',)
         tot_items = request.POST.get('tot_items',)
-        tot_cost = request.POST.get('tot_cost',)
         adress = request.POST.get('adress',)
         order = request.POST.get('order',)
         date = request.POST.get('date',)
         
-        placeorder = customer(c_name=c_name,c_contact=c_contact,tot_items=tot_items,tot_cost=tot_cost,adress=adress,order=order,date=date)
+        placeorder = customer(c_name=c_name,c_contact=c_contact,tot_items=tot_items,adress=adress,order=order,date=date)
         placeorder.save()        
     return render(request,'myapp/orderplace.html')   
 
@@ -60,11 +59,3 @@ def supplier_order(request):
     }
     return render(request,'myapp/supplierorder.html',context)   
 
-def index(request):
-    stock_list = stock_entry.objects.all()
-    #return render(request,'myapp/index.html')
-    #return HttpResponse(stock_list)
-    context={
-        'stock_list':stock_list
-    }
-    return render(request,'myapp/index.html',context)
