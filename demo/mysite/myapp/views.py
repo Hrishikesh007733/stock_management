@@ -14,10 +14,14 @@ def manager_page(request):
 def details(request,product_id):
    stock = stock_entry.objects.get(id=product_id)   
    return render(request,'myapp/details.html',{'stock':stock}) 
-   #return HttpResponse("hello number%s"% product_id)
+   
 
 def customer_cus(request):
-    return render(request,'myapp/cushomepage.html')
+    display= customer.objects.all()
+    context={
+        'display': display
+    }
+    return render(request,'myapp/cushomepage.html',context)
 
 def stock_add(request):
     if request.method == "POST":
@@ -33,6 +37,10 @@ def stock_add(request):
     return render(request,'myapp/add_stock.html')   
 
 def place_order(request):
+    place_order = stock_entry.objects.all()
+    context={
+        'place_order': place_order
+    }
     if request.method == "POST":
         c_name = request.POST.get('c_name',)
         c_contact = request.POST.get('c_contact',)
@@ -42,8 +50,9 @@ def place_order(request):
         date = request.POST.get('date',)
         
         placeorder = customer(c_name=c_name,c_contact=c_contact,tot_items=tot_items,adress=adress,order=order,date=date)
-        placeorder.save()        
-    return render(request,'myapp/orderplace.html')   
+        placeorder.save()
+
+    return render(request,'myapp/orderplace.html',context)      
 
 def product_list(request):
     product_list = stock_entry.objects.all()
@@ -57,5 +66,5 @@ def supplier_order(request):
     context = {
         'supplier_order': supplier_order
     }
-    return render(request,'myapp/supplierorder.html',context)   
+    return render(request,'myapp/supplierorder.html',context)  
 
