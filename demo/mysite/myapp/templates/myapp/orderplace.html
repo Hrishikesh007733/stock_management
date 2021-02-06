@@ -48,31 +48,26 @@
                     <td><textarea type="text" name="adress" id="adress" placeholder="enter the adress"required></textarea></td>  
                 </tr>
                 <tr>
-                    <th scope="row">ORDER THE ITEMS</th>
-                    <td><input type="text" name="order" id="order" placeholder="enter the order" required></td>  
-                </tr>
-                <tr>
                     <th scope="row">ORDER TIME</th>
                     <td><input type="date" name="date" id="date" placeholder="enter the order date" required></td>  
                 </tr>
                 <tr>
-                    <select name="dropdown">
-                        <th scope="row">ORDER THE ITEMS</th>
-                       <option selected disabled="true">order items</option>
-                       <option> 
-                         {% for i in place_order %}
-                          {{i.product_name}}
-                         {% endfor %}
-                       </option>
-                       
-                        
-                    </select>
+                    <th scope="row">ORDER THE ITEMS</th>
+                    <td>    
+                        <label>Select the item:</label>
+                        <select name="order" id="order">
+                            {% for i in place_order %}
+                            <option value="{{i.id}}">           
+                                {{i.product_name}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </td>
                 </tr>  
                 
             </tbody>
          </table></center>
-         <center><h2><input type="submit" name="submit" id=""></h2></center>
-                
+         <center><h2><input type="submit" name="submit" id=""></h2></center>   
         </form>
      <div class="but">
          <center><div class="button"><a href="/cushomepage/">exit</a></div></center>

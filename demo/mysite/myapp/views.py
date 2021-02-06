@@ -52,6 +52,12 @@ def place_order(request):
         placeorder = customer(c_name=c_name,c_contact=c_contact,tot_items=tot_items,adress=adress,order=order,date=date)
         placeorder.save()
 
+        item_id = int(order)
+        no_of_items = int(tot_items)
+        t = stock_entry.objects.get(id = item_id)
+        t.aval_stock = t.aval_stock - no_of_items
+        t.save()
+
     return render(request,'myapp/orderplace.html',context)      
 
 def product_list(request):
