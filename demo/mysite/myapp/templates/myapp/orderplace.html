@@ -1,5 +1,6 @@
 
 {% load static %}
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="{% static 'myapp/productlist.css' %}">
@@ -22,9 +23,9 @@
     </head>
   <body>
       <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-       <center><h1 style="color: darkblue;"> PLACE ORDER</h1></center>
-       <center> <table class="placeorder">
+         {% csrf_token %}
+         <center><h1 style="color: darkblue;"> PLACE ORDER</h1></center>
+         <center> <table class="placeorder">
             <thead>
              <tr>
               <th scope="col">CUSTOMER NAME</th>
@@ -36,7 +37,8 @@
                 <tr>
                   <th scope="row">CUSTOMER CONTACT</th>
                   <td><input type="text" name="c_contact" id="c_contact" placeholder="enter the customer contact" required></td>  
-                </tr>  
+                </tr>
+               
                 <tr>
                     <th scope="row">TOTAL ITEMS</th>
                     <td><input type="text" name="tot_items" id="tot_items" placeholder="enter the total items" required></th></td>  
@@ -53,12 +55,25 @@
                     <th scope="row">ORDER TIME</th>
                     <td><input type="date" name="date" id="date" placeholder="enter the order date" required></td>  
                 </tr>
+                <tr>
+                    <select name="dropdown">
+                        <th scope="row">ORDER THE ITEMS</th>
+                       <option selected disabled="true">order items</option>
+                       <option> 
+                         {% for i in place_order %}
+                          {{i.product_name}}
+                         {% endfor %}
+                       </option>
+                       
+                        
+                    </select>
+                </tr>  
                 
             </tbody>
-        </table></center>
-        <center><h2><input type="submit" name="submit" id=""></h2></center>
+         </table></center>
+         <center><h2><input type="submit" name="submit" id=""></h2></center>
                 
-     </form>
+        </form>
      <div class="but">
          <center><div class="button"><a href="/cushomepage/">exit</a></div></center>
      </div>
